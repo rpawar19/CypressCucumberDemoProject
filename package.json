@@ -1,0 +1,27 @@
+{
+  "name": "cypresscucumberdemoproject1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:cloud":"cypress run --record --parallel --key 56b0ec33-331e-4184-9d82-926e3336c94f"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "cypress": "^13.8.1",
+    "cypress-xpath": "^2.0.1"
+  },
+  "cypress-cucumber-preprocessor":{
+    "stepDefinitions":
+      ["cypress/e2e/*/*.js",
+       "cypress/e2e/step_definitions/*.js",
+       "cypress/e2e/step_definitions/**/*.js",
+       "cypress/e2e/*/"],
+       "nonGlobalStepDefinitions": false
+
+  }
+}
